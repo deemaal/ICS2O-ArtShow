@@ -11,7 +11,14 @@ Mover.prototype.update = function(){
 
 Mover.prototype.show = function(){
    
-    fill(random(10),random(255),random(40));
+     
     noStroke();
-    ellipse(this.x, this.y, 10,10);
+  if(random(1)<0.5){
+  fill(random(255)%100);
+    rect(this.x, this.y,20,20);
+  }else{
+    fill(200,30,30);
+  ellipse(this.x,this.y,30,30);
+  }
+  
 };
